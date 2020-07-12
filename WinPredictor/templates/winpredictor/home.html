@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title></title>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+    <div style="background-image: url({% static 'bg.jpg' %}); background-position: center; background-size: cover;">
+
+      <nav class="navbar navbar-dark bg-dark" style = "border:3px solid black">
+          <span class="navbar-brand mb-0 h1">CricPredictor</span>
+      </nav>
+
+      <div>
+          <label class='bg-dark' for="info" style = "color:white;padding:30px;margin-left:15%;margin-right:15%;margin-top:5%;width:950px;border:3px solid black;display: inline-block;">
+            Our website is used to predict the winner of a match based on the current situation of the game during the second innings.<br>
+            This website is bascially based on Random Forest Classification Model, a Machine Learning Model.
+            Just Fill the following form and click on submit.
+          </label>
+      </div>
+     
+      <form class='bg-dark' action="predict\" method="get" style = "color:white; margin-left:25%;margin-right:25%;margin-top:5%;margin-bottom:5%;width:650px;border:3px solid black;display: inline-block;">
+          <div class="form-group" style = "margin:15px;">
+            <label for="username">Enter Your Name</label>
+            <input type="name" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group" style="margin:15px;">
+              <label for="exampleFormControlSelect1">Select Batting Team</label>
+              <select class="form-control" id="battingTeam" name="battingTeam">
+                <option>Royal Challengers Bangalore</option> <option>Kolkata Knight Riders</option> <option>Mumbai Indians</option><option>Chennai Super Kings</option>
+                <option>Sunrisers Hyderabad</option> <option>Rajasthan Royals</option> <option>Kings XI Punjab</option><option>Delhi Capitals</option>
+              </select>
+            </div>
+          <div class="form-group" style="margin:15px;">
+              <label for="exampleFormControlSelect1">Select Fielding Team</label>
+              <select class="form-control" id="fieldingTeam" name="fieldingTeam">
+                  <option>Royal Challengers Bangalore</option> <option>Kolkata Knight Riders</option> <option>Mumbai Indians</option> <option>Chennai Super Kings</option>
+                  <option>Sunrisers Hyderabad</option> <option>Rajasthan Royals</option> <option>Kings XI Punjab</option> <option>Delhi Capitals</option>
+              </select>
+          </div>
+          <div class="form-group" style="margin:15px;">
+              <label for="exampleFormControlSelect1">Select Venue</label>
+              <select class="form-control" id="venue" name="venue">
+                <option>M Chinnaswamy Stadium</option> <option>Eden Gardens</option> <option>Feroz Shah Kotla</option>
+                <option>Rajiv Gandhi International Stadium, Uppal</option> <option>MA Chidambaram Stadium, Chepauk</option>
+                <option>Punjab Cricket Association Stadium, Mohali</option> <option>Sawai Mansingh Stadium</option> 
+                <option>Maharashtra Cricket Association Stadium</option>  <option>Subrata Roy Sahara Stadium</option>
+                <option>Dr DY Patil Sports Academy</option> <option>Others</option>
+              </select>
+          </div>
+          <div class="form-group" style="margin:15px;">
+          <div class="form-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Current Score" id="score" name="score">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Wickets Lost" id="wickets" name="wickets">
+              </div>
+            </div>
+          </div>
+          <div class="form-group" style="margin:15px;">
+              <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="No of Balls Left" id="balls" name="balls">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Enter Target" id="target" name="target">
+                  </div>
+                </div>
+          </div>
+          <div class="form-group" style="margin:15px;">
+              <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Runs Scored in Last 5 Overs" id="score5" name="score5">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Wickets Lost in Last 5 Overs" id="wickets5" name="wickets5">
+                  </div>
+                </div>
+          </div>
+          <div style="text-align:center;">
+            <button type="submit" class="btn btn-success" style="margin:15px;">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> Himanshu Malik</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+  </body> 
+</html>
