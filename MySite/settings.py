@@ -24,7 +24,7 @@ SECRET_KEY = 'y&k7&ndztu9z(b10=(hz3&t$&-)3e-xzn^&exr-)^-@5$5$vh$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','cric-predictor.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','cric-predictor-ipl.herokuapp.com']
 
 
 # Application definition
