@@ -10,9 +10,9 @@ d = {'Royal Challengers Bangalore':'RCB', 'Kolkata Knight Riders':'KKR', 'Chenna
 d2 = {'RCB':'Royal Challengers Bangalore', 'KKR':'Kolkata Knight Riders', 'CSK':'Chennai Super Kings', 'MI':'Mumbai Indians',
     'DC':'Delhi Capitals', 'SRH':'Sunrisers Hyderabad', 'RR':'Rajasthan Royals', 'KXIP':'Kings XI Punjab'} 
 
-x_temp = pd.read_csv('F:\My Programs\Django Project\ML - Cricket Predictor\MySite\site_data.csv')
-model = pickle.load(open('F:\My Programs\Django Project\ML - Cricket Predictor\MySite\Tfile.pkl', 'rb'))
-scaler = pickle.load(open('F:\My Programs\Django Project\ML - Cricket Predictor\MySite\scaler.pkl', 'rb'))
+x_temp = pd.read_csv('site_data.csv')
+model = pickle.load(open('Tfile.pkl', 'rb'))
+scaler = pickle.load(open('scaler.pkl', 'rb'))
 cols = ['batting_team', 'bowling_team', 'wicket_fallen', 'score', 'target', 'runs_prev_5', 'wick_prev_5' , 'balls_left', 'venue']
 
 # Create your views here.
