@@ -17,7 +17,7 @@ cols = ['batting_team', 'bowling_team', 'wicket_fallen', 'score', 'target', 'run
 
 # Create your views here.
 def index(request) :
-    return render(request, 'winpredictor\home.html')
+    return render(request, 'winpredictor/home.html')
 
 def predict(request) :
     name = query=request.GET.get('username','')
