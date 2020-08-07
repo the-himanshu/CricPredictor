@@ -14,45 +14,315 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <style>
+      @media only screen and (min-width : 1080px)
+      {
+        .navx
+        {
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .main
+        {
+          color: white;
+          padding: 30px;
+          margin-left: 15%;
+          margin-right: 15%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .form-box
+        {
+          color: white;
+          padding: 30px;
+          margin-left: 27%;
+          width: 700px;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+      }
+
+      @media only screen and (max-width : 300px)
+      {
+        .navx
+        {
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+        }
+        .main
+        {
+          color: white;
+          padding: 8px;
+          margin-left: 8%;
+          margin-right: 8%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+          font-size: 7px;
+        }
+        .form-box
+        {
+          color: white;
+          padding: 8px;
+          margin-left: 8%;
+          margin-right: 8%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .form-entry
+        {
+          font-size: 10px;        
+        }
+        input::placeholder
+        {
+          font-size: 9px;
+        }
+        .list-form
+        {
+          font-size: 10px;
+        }
+      }
+
+      @media (min-width : 300px) and (max-width : 600px)
+      {
+        .navx
+        {
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+        }
+        .main
+        {
+          color: white;
+          padding: 8px;
+          margin-left: 8%;
+          margin-right: 8%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+          font-size: 9px;
+        }
+        .form-box
+        {
+          color: white;
+          padding: 10px;
+          margin-left: 8%;
+          margin-right: 8%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .form-entry
+        {
+          font-size: 14px;        
+        }
+        input::placeholder
+        {
+          font-size: 12px;
+        }
+        .list-form
+        {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width : 600px) and (max-width : 700px)
+      {
+        .navx
+        {
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+        }
+        .main
+        {
+          color: white;
+          padding: 8px;
+          margin-left: 8%;
+          width: 540px;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+          font-size: 9px;
+        }
+        .form-box
+        {
+          color: white;
+          padding: 10px;
+          margin-left: 15%;
+          margin-right: 12%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .form-entry
+        {
+          font-size: 16px;        
+        }
+        input::placeholder
+        {
+          font-size: 14px;
+        }
+        .list-form
+        {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width : 700px) and (max-width : 900px)
+      {
+        .navx
+        {
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+        }
+        .main
+        {
+          color: white;
+          padding: 8px;
+          margin-left: 8%;
+          width: 640px;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+          font-size: 15px;
+        }
+        .form-box
+        {
+          color: white;
+          padding: 10px;
+          margin-left: 20%;
+          margin-right: 12%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .form-entry
+        {
+          font-size: 16px;        
+        }
+        input::placeholder
+        {
+          font-size: 14px;
+        }
+        .list-form
+        {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width : 900px) and (max-width : 1050px)
+      {
+        .navx
+        {
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+        }
+        .main
+        {
+          color: white;
+          padding: 8px;
+          margin-left: 8%;
+          width: 855px;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+          font-size: 18px;
+        }
+        .form-box
+        {
+          color: white;
+          padding: 10px;
+          margin-left: 28%;
+          margin-right: 12%;
+          margin-top: 5%;
+          display: inline-block;
+          border-width: 3px;
+          border-color: black;
+          border-style: solid;
+        }
+        .form-entry
+        {
+          font-size: 16px;        
+        }
+        input::placeholder
+        {
+          font-size: 14px;
+        }
+        .list-form
+        {
+          font-size: 14px;
+        }
+      }
+    </style>
   
   </head>
   <body>
-    <div style="background-image: url({% static 'bg.jpg' %}); background-position: center; background-size: cover;">
-
-      <nav class="navbar navbar-dark bg-dark" style = "border:3px solid black">
+    <div>
+      <nav class="navbar navbar-dark bg-dark navx">
           <span class="navbar-brand mb-0 h1">CricPredictor</span>
       </nav>
 
       <div>
-          <label class='bg-dark' for="info" style = "color:white;padding:30px;margin-left:15%;margin-right:15%;margin-top:5%;width:950px;border:3px solid black;display: inline-block;">
+          <label class='bg-dark main' for="info">
             Our website is used to predict the winner of a match based on the current situation of the game during the second innings.<br>
             This website is bascially based on Random Forest Classification Model, a Machine Learning Model.
             Just Fill the following form and click on submit.
           </label>
       </div>
      
-      <form class='bg-dark' action="predict\" method="get" style = "color:white; margin-left:25%;margin-right:25%;margin-top:5%;margin-bottom:5%;width:650px;border:3px solid black;display: inline-block;">
-          <div class="form-group" style = "margin:15px;">
+      <form class='bg-dark form-box' action="predict\" method="get">
+          <div class="form-group form-entry">
             <label for="username">Enter Your Name</label>
             <input type="name" class="form-control" id="username" name="username" aria-describedby="emailHelp">
           </div>
-          <div class="form-group" style="margin:15px;">
+          <div class="form-group form-entry">
               <label for="exampleFormControlSelect1">Select Batting Team</label>
-              <select class="form-control" id="battingTeam" name="battingTeam">
+              <select class="form-control list-form" id="battingTeam" name="battingTeam">
                 <option>Royal Challengers Bangalore</option> <option>Kolkata Knight Riders</option> <option>Mumbai Indians</option><option>Chennai Super Kings</option>
                 <option>Sunrisers Hyderabad</option> <option>Rajasthan Royals</option> <option>Kings XI Punjab</option><option>Delhi Capitals</option>
               </select>
             </div>
-          <div class="form-group" style="margin:15px;">
+          <div class="form-group form-entry">
               <label for="exampleFormControlSelect1">Select Fielding Team</label>
-              <select class="form-control" id="fieldingTeam" name="fieldingTeam">
+              <select class="form-control list-form" id="fieldingTeam" name="fieldingTeam">
                   <option>Royal Challengers Bangalore</option> <option>Kolkata Knight Riders</option> <option>Mumbai Indians</option> <option>Chennai Super Kings</option>
                   <option>Sunrisers Hyderabad</option> <option>Rajasthan Royals</option> <option>Kings XI Punjab</option> <option>Delhi Capitals</option>
               </select>
           </div>
-          <div class="form-group" style="margin:15px;">
+          <div class="form-group form-entry">
               <label for="exampleFormControlSelect1">Select Venue</label>
-              <select class="form-control" id="venue" name="venue">
+              <select class="form-control list-form" id="venue" name="venue">
                 <option>M Chinnaswamy Stadium</option> <option>Eden Gardens</option> <option>Feroz Shah Kotla</option>
                 <option>Rajiv Gandhi International Stadium, Uppal</option> <option>MA Chidambaram Stadium, Chepauk</option>
                 <option>Punjab Cricket Association Stadium, Mohali</option> <option>Sawai Mansingh Stadium</option> 
@@ -60,7 +330,7 @@
                 <option>Dr DY Patil Sports Academy</option> <option>Others</option>
               </select>
           </div>
-          <div class="form-group" style="margin:15px;">
+          <div class="form-group form-entry">
           <div class="form-row">
               <div class="col">
                 <input type="text" class="form-control" placeholder="Current Score" id="score" name="score">
@@ -70,7 +340,7 @@
               </div>
             </div>
           </div>
-          <div class="form-group" style="margin:15px;">
+          <div class="form-group" form-entry>
               <div class="form-row">
                   <div class="col">
                     <input type="text" class="form-control" placeholder="No of Balls Left" id="balls" name="balls">
@@ -80,13 +350,13 @@
                   </div>
                 </div>
           </div>
-          <div class="form-group" style="margin:15px;">
+          <div class="form-group" form-entry>
               <div class="form-row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Runs Scored in Last 5 Overs" id="score5" name="score5">
+                    <input type="text" class="form-control" placeholder="Runs in Last 5" id="score5" name="score5">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Wickets Lost in Last 5 Overs" id="wickets5" name="wickets5">
+                    <input type="text" class="form-control" placeholder="Wickets in Last 5" id="wickets5" name="wickets5">
                   </div>
                 </div>
           </div>
