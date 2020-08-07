@@ -8,23 +8,115 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title></title>
+    <title>Prediction Result</title>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <style>
+      @media only screen and (min-width : 1080px)
+      {
+        .result
+        {
+          margin-top: 10%;
+        }
+        .result p
+        {
+          text-align: center;
+        }
+        .result h1
+        {
+          text-align: center;
+        }
+        .lead
+        {
+          text-align: center;
+        }
+      }
+
+      @media only screen and (max-width : 300px)
+      {
+        .result
+        {
+          margin-top: 12%;
+        }
+        .result p
+        {
+          text-align: center;
+          font-size: 10px;
+        }
+        .result h1
+        {
+          text-align: center;
+          font-size: 20px;
+        }
+        .lead
+        {
+          text-align: center;
+          font-size: 10px;
+        }
+      }
+
+      @media (min-width : 300px) and (max-width : 700px)
+      {
+        .result
+        {
+          margin-top: 15%;
+        }
+        .result p
+        {
+          text-align: center;
+          font-size: 12px;
+        }
+        .result h1
+        {
+          text-align: center;
+          font-size: 22px;
+        }
+        .lead
+        {
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+
+      @media (min-width : 700px) and (max-width : 1050px)
+      {
+        .result
+        {
+          margin-top: 15%;
+        }
+        .result p
+        {
+          text-align: center;
+          font-size: 21px;
+        }
+        .result h1
+        {
+          text-align: center;
+          font-size: 31px;
+        }
+        .lead
+        {
+          text-align: center;
+          font-size: 21px;
+        }
+      } 
+    </style>
   
   </head>
+
   <body>
 
       <nav class="navbar navbar-dark bg-dark">
           <span class="navbar-brand mb-0 h1">CricPredictor</span>
       </nav>
 
-      <div style = "background-color:white;padding:30px;margin-left:37%;margin-right:25%;margin-top:12%;border:3px solid black;display: inline-block;">
-          <h1 class="cover-heading" style="text-align:center">Final Prediction</h1>
-          <p class="lead" style="text-align:center"><b><br><b>{{winner}}</b> will win the match</b></p>
-          <p style="text-align:center">{{batting}} - {{proba2}} % chances<br>
+      <div class='result'>
+          <h1 class="cover-heading">Final Prediction</h1>
+          <p class="lead"><b><br><b>{{winner}}</b> will win the match</b></p>
+          <p>{{batting}} - {{proba2}} % chances<br>
           {{fielding}} - {{proba1}} % chances</p>
           <br>
        </div>
